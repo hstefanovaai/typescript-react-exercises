@@ -18,7 +18,7 @@ export default function Button(props: ButtonProps | LinkProps) {
   //     return <a {...otherProps}></a>; - typescript error
   //   }
 
-  if (props.el === "a") {
+  if (props.el === "link") {
     return <a {...props}></a>;
   }
 

@@ -1,5 +1,6 @@
 import Button from "./components/Button";
 import Input from "./components/Input";
+import Container from "./components/Container";
 
 function App() {
   return (
@@ -26,6 +27,14 @@ function App() {
           Go to Example.com
         </Button>
       </div>
+
+      <Container
+        as={Button}
+        el="button"
+        onClick={() => alert("Polymorphic button clicked!")}
+      >
+        Polymorphic Button
+      </Container>
     </>
   );
 }
