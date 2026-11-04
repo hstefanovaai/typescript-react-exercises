@@ -28,7 +28,7 @@ export default function CourseGoalsList({
 
   if (goals.length > 3) {
     warningMessage = (
-      <InfoBox mode="warning">
+      <InfoBox mode="warning" severity="high">
         <p>You have more than 3 goals. Consider prioritizing them.</p>
       </InfoBox>
     );
