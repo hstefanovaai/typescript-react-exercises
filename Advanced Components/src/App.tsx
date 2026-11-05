@@ -1,16 +1,21 @@
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
-import Form from "./components/Form";
+import Form, {FormHandler } from "./components/Form";
+import { useRef } from "react";
 
 function App() {
+  const customForm = useRef<FormHandler>(null);
+
   function handleSubmit(data: unknown) {
     const extractedData = data as { name: string; age: string };
     console.log("Form submitted with data:", extractedData);
+
+    customForm.current?.clear(); // Clear the form after submission
   }
   return (
     <>
-      <Form onSave={handleSubmit}>
+      <Form onSave={handleSubmit} ref={customForm}>
         <Input
           type="text"
           id="name"
