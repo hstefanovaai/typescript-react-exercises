@@ -54,7 +54,6 @@ const initialState: TimersState = {
 function timersReducer(state: TimersState, action: Action): TimersState {
   switch (action.type) {
     case "ADD_TIMER":
-        console.log("here: ", action.payload);
       return {
         ...state,
         timers: [
